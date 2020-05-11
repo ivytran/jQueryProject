@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!-- for azure:  all these links must use https, not http -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <title>My First jQuery Mobile Application</title>
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.css"/>
+  <script src="https://code.jquery.com/jquery-1.8.2.min.js"> </script>
+  <script src="https://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"></script>
+  <script src="/main.js"></script>
+ </head>
+
+ <body>
+      //*********************************************************
+      //*********************************************************
+<div data-role="page" id="Home">
+
+   <div data-role="header" data-theme='b'> 
+      <h1>Ivy's Animal Crossing App</h1>
+      <div data-role="navbar">
+         <ul>
+               <li><a href="#Show" data-icon="star">Inventory</a> </li>
+               <li><a href="#AddDelete" data-icon="plus">Edit your Inventory</a> </li>
+         </ul>
+      </div><!-- /navbar -->
+   </div>
+
+   <div data-role="content" data-theme='c'>
+      <h2>Animal Crossing App</h2>
+      <img src="./images/NotePic.jpeg" alt="Smiley face" >.
+      
+   </div>
+
+   <div data-role="footer" data-theme='b'>
+      <h1>Copywrite Kurt 2020</h1>
+   </div>
+
+</div>
+//*********************************************************
+//*********************************************************
+<div data-role="page" id="Show">
+
+   <div data-role="header" data-theme='b'> 
+      <h1>Animal Crossing App</h1>
+      <div data-role="navbar">
+            <ul>
+                  <li><a href="#Home" data-icon="home">Home Page</a></li>
+                  <li><a href="#AddDelete" data-icon="plus">Edit Inventory</a> </li>
+            </ul>
+         </div><!-- /navbar -->
+   </div>
+
+   <div data-role="content" data-theme='c'>
+     <h2>My Inventory</h2>
+     <div>
+         1 Star Fragment</br>
+         1 Shovel</br>
+         200 Turnips </div><br>
+         Add Inventory
+     </div>
+   </div>
+
+   <div data-role="footer" data-theme='b'>
+      <h1>Copywrite Kurt 2020</h1>
+   </div>
+
+</div>
+
+<div data-role="page" id="AddDelete">
+
+            <div data-role="header" data-theme='b'> 
+            <h1>Animal Crossing App</h1>
+               <div data-role="navbar">
+                     <ul>
+                        <li><a href="#Home" data-icon="home">Home Page</a></li>
+                        <li><a href="#Show" data-icon="star">Show Inventory</a> </li>
+                     </ul>
+                  </div><!-- /navbar -->
+            </div>
+    
+            <div data-role="content" data-theme='d'>
+               <h2>Delete your inventory</h2>
+         
+               Click this delete button
+            </div>
+            <div data-theme='d'>
+               <h3>Add a new item here</h3>
+               This should have a drop down menu that shows the item list<br>
+               After the user selects an item another dropdown menu shows that allows the user to select a quantity<br>
+               There should be an add button that allows the user to add an item to the inventory list
+
+            </div>
+    
+            <div data-role="footer"  data-theme='b'>
+                <h1>Copywrite Kurt 2020</h1>
+            </div>
+    
+</div>
+
+
+//*********************************************************
+//*********************************************************
+
+<!-- // this page should be hidden until the user selects the "add inventory" on the show inventory page-->
+
+<div data-role="page" id="Details">
+
+            <div data-role="header" data-theme='b'> 
+            <h1>Kurt's Note App</h1>
+               <div data-role="navbar">
+                     <ul>
+                        <li><a href="#Home" data-icon="home">Home Page</a></li>
+                        <li><a href="#Show" data-icon="star">Show Inventory</a> </li>
+                        <li><a href="#AddDelete" data-icon="plus">Edit Inventory</a> </li>
+                     </ul>
+                  </div><!-- /navbar -->
+            </div>
+    
+            <div data-role="content" data-theme='d'>
+               <h2>Here are the details for that Note</h2>
+               <div>
+                  <p id="IDparmHere" hidden>change1</p>  <!-- not visable,     a place to stash the note title -->
+                      <!-- our li events write the value, and our Details pagebeforeshow  reads it -->
+                  <p class="bold" > Here are the details</p>
+                  <p> <span class="bold"> Priority: </span> <span id="onePriority" </span>  </p>
+                  <p><span class="bold"> Title: </span> <span id="oneTitle" </span>  </p>
+                  <p><span class="bold"> Details: </span> <span id="oneDetail" </span>  </p>
+               </div>
+               
+
+            </div>
+    
+            <div data-role="footer"  data-theme='b'>
+                <h1>Copywrite Kurt 2020</h1>
+            </div>
+    
+</div>
+
+
+ </body>
+ </html> 
