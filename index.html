@@ -52,10 +52,13 @@
 
    <div data-role="content" data-theme='c'>
      <h2>My Inventory</h2>
-     <div>
+     <div> 
          1 Star Fragment</br>
          1 Shovel</br>
          200 Turnips </div><br>
+         <p>The selected out put is
+         <span class ="output"></span>
+      </p>
          
          <button type = "button"><a href="#Details">Sell!</a></button>
          There is a button here that allows the user to "Sell" everything that is in their inventory which will lead them to the fourth page 
@@ -110,6 +113,15 @@
                   <option value="cowerie">Cowerie</option>
                   <option value="gClam">Giant Clam</option>
                   <option value="sdollar">Sand Dollar</option>
+                  <option value="sSnail">Sea Snail</option>
+                  <option value="mClam">Manilla Clam</option>
+                  <option value="vComb">Venus Comb</option>
+                  <option value="sumShell">Summer Shell</option>
+                  <option value="eCan">Empty Can</option>
+                  <option value="boot">Boot</option>
+                  <option value="oTire">Old Tire</option>
+                  <option value="rPart">Rusted Part</option>
+
                </select>
                There are corresponding drop down menus that only appear if there is an item with multiple variations
                <select id = "starfragtype">
@@ -140,11 +152,23 @@
                   <option value="earthegg">Earth Egg</option>
                   <option value="woodegg">Wood Egg</option>
                </select>
+               <select id="mushroom">
+                  <option value="elMushroom">Elegent Mushroom</option>
+                  <option value="rMushroom">Rare Mushroom</option>
+                  <option value="flMushroom">Flat Mushroom</option>
+   
+               </select>
                
                
                After the correct options have been chosen there will then be a box that allows the user to submit the amount they want to add
                <form><input type="text"> Numeric values would be accepted here</form>
                There should then be a button that allows the user to add it to the inventory
+               <button onclick = "getOption()">Add!</button>
+               <p> 
+                  The value of the option selected is: 
+                  <span class="output"></span> 
+              </p> 
+                
             </div>
     
             <div data-role="footer"  data-theme='b'>
